@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!--Style-->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link id="tema" rel="stylesheet" href="css/style.css">
+</head> 
 <!--header-->
 
 <body>
@@ -81,8 +81,16 @@
     <div class="section mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                
+                <div class="containerImgPortadaTema1 col-md-4 col-sm-6 col-xs-12">
                     <img src="img/mountainbike.png" alt="mountain-bike" class="img-fluid">
+                </div>
+                <div class="containerImgPortadaTema2 col-md-12 col-sm-12 col-xs-12">
+                    <img src="img/mountainbike-wide.png" alt="The Bike Race Series" class="img-fluid imgPortadaTema2">
+                    <h2 class="text-center mq2">About Bikes, Pedals & Mountains</h2>
+                </div>
+                <div  class="redLogoTema2 col-md-4 col-sm-12 col-xs-12">
+                    <img src="img/redLogo.jpeg" alt="The Bike Race Series" class="img-fluid">
                 </div>
                 <div class="col-md-8 col-sm-6 col-xs-12">
                     <h2>Mission</h2>
@@ -127,6 +135,7 @@
                             <i class="fa-brands fa-instagram"></i></a>
 
                     </p>
+                    <button id="btnTema" onclick="cambiarTema()">Cambiar tema</button>
                 </div>
             </div>
         </div>
