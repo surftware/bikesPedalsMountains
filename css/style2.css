@@ -23,8 +23,12 @@
     height: 360px;
 }
 
-redLogoTema2 {
-    display:block
+.redLogoTema2 {
+    display:block;
+}
+
+.redLogoTema3 {
+    display:none;
 }
 
 .mq1{
