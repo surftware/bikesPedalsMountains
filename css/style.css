@@ -1,3 +1,20 @@
 .logo{
     width: 50px;
 }
+
+.containerImgPortadaTema1 {
+    display: block;
+}
+
+
+.containerImgPortadaTema2 {
+    display: none;
+}
+
+.redLogoTema2 {
+    display:none;
+}
+
+.mq2{
+    display: none;
+}
