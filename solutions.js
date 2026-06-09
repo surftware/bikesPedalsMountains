@@ -10,7 +10,7 @@ export const triArea = (base, altura) => (base*altura)/2;
 console.log("triArea(4,5)="+triArea(4,5));
 console.log("triArea(9,3)="+triArea(9,3));
 
-export const ringArea = ( radioExterno,radioInterno) => Math.PI*((radioInterno**2)-(radioExterno**2));
+export const ringArea = ( radioInterno,radioExterno) => (Math.PI*(radioExterno**2))-(Math.PI*(radioInterno**2));
 console.log("ringArea(1,4)="+ringArea(1,4));
 console.log("ringArea(5,7)="+ringArea(5,7));
 console.log("ringArea(6,6)="+ringArea(6,6));
