@@ -14,3 +14,11 @@ export const ringArea = ( radioInterno,radioExterno) => (Math.PI*(radioExterno**
 console.log("ringArea(1,4)="+ringArea(1,4));
 console.log("ringArea(5,7)="+ringArea(5,7));
 console.log("ringArea(6,6)="+ringArea(6,6));
+
+export const f2c = (farenheit) => ((farenheit-32)*5)/9;
+console.log("f2c(32)="+f2c(32));
+console.log("f2c(100)="+f2c(100));
+
+export const c2f = (celsius) => (celsius*(9/5))+32;
+console.log("c2f(40)="+c2f(40));
+console.log("c2f(100)="+c2f(100));
