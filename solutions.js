@@ -56,6 +56,10 @@ export const ellide = (cadena,n) => {
 
   console.log(longer("Andres","Dominik"));
 
+  
+
+             setTimeout(  () => {console.log("Frida");} , 1000 );
+
 
   export const mid3 = (a, b, c) => {
 
@@ -81,17 +85,87 @@ export const lastFirst = ({ nombre, apellido }) => {
     if (apellido) return `${apellido}`;
     if (nombre) return `${nombre}`;
 
-    return '';
+    return "";
 };
 
 console.log(lastFirst({nombre: "Eva",apellido: "Arciniega"}));
 console.log(lastFirst({nombre: "",apellido: "Arciniega"}));
 console.log(lastFirst({nombre: "Eva",apellido: ""}));
-console.log(lastFirst({nombre: "",apellido: ""}));    
+console.log(lastFirst({nombre: "",apellido: ""}));   
+
+const makeCircle = (radius) => ({
+  radius: radius,
+  circumference: 2 * Math.PI * radius
+});
+
+//Lo sieguiente devuelve un objeto
+console.log(makeCircle(5));
+//Lo siguiente no se puede por ser funcion flecha
+//let a = new makeCircle(10);
+
+
+
+
+function makeCircleFunc(radius) {
+    this.radius = radius;
+    this.circumference = 2 * Math.PI * this.radius;
+}
+
+let c = new makeCircleFunc(10);
+console.log(c);
+
+
+
+//Lo siguiente usa arrow functions, para que dentro de setTimeout, pueda usarse el nombre de Frida, es decir el contexto anterior a esa funcion 
+// Se usa una arrow function para que conserve el mismo `this`
+// que tiene el método saludar(). De esta forma `this.nombre`
+// sigue apuntando al objeto persona ("Frida") cuando setTimeout
+// ejecuta el callback después de 1 segundo.
+const persona = {
+    nombre: "Frida",
+
+    saludar() {
+
+        setTimeout(() => {
+            console.log(this.nombre);
+        }, 1000);
+    }
+};
+
+persona.saludar();
+
     
    
 
     
+//Lo siguiente ya no muestra el nombre de juan, muestra undefined porque interpreta qiue lo llamo setTimeout, por eso se usan los arrow 
+const person = {
+    nombre: "juan",
+
+    saludar() {
+        setTimeout(function(){
+            console.log(this.nombre);
+        }, 1000);
+    }
+};
+
+person.saludar();
 
 
+//El siguiente es lo correcot de forma antigua , por lo cual ya mejor se usa arrow funcitons
+const personOld = {
+    nombre: "juan",
+
+    saludar() {
+
+        const self = this;
+
+        setTimeout(function() {
+            console.log(self.nombre);
+        }, 1000);
+
+    }
+};
+
+personOld.saludar();
 
