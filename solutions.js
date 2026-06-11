@@ -22,3 +22,25 @@ console.log("f2c(100)="+f2c(100));
 export const c2f = (celsius) => (celsius*(9/5))+32;
 console.log("c2f(40)="+c2f(40));
 console.log("c2f(100)="+c2f(100));
+
+export const makeName = (firstName,lastName) =>{
+
+    const persona = {nombre:firstName,apellido:lastName}; 
+    
+    
+    return `${persona.apellido}, ${persona.nombre}`;
+
+    
+};
+
+export const ellide = (cadena,n) => {
+
+    return cadena.substring(0,n) + "...";
+
+    
+
+};
+
+ console.log(ellide("Soy Armando",10));
+
+
