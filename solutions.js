@@ -25,7 +25,7 @@ console.log("c2f(100)="+c2f(100));
 
 export const makeName = (firstName,lastName) =>{
 
-    const persona = {nombre:firstName,apellido:lastName}; 
+    let persona = {nombre:firstName,apellido:lastName}; 
     
     
     return `${persona.apellido}, ${persona.nombre}`;
@@ -42,5 +42,65 @@ export const ellide = (cadena,n) => {
 };
 
  console.log(ellide("Soy Armando",10));
+
+
+ export const longer = (cadena1,cadena2) => {
+
+    return cadena1.length >= cadena2.length 
+    ? cadena1 
+    : cadena2;
+
+   
+
+ };
+
+  console.log(longer("Andres","Dominik"));
+
+
+  export const mid3 = (a, b, c) => {
+
+    if ((a >= b && a <= c) || (a <= b && a >= c)) {
+        return a;
+    }
+
+    if ((b >= a && b <= c) || (b <= a && b >= c)) {
+        return b;
+    }
+
+    return c;
+};
+
+
+export const lastFirst = (firstName, lastName) => {
+
+    let persona = { nombre: firstName, apellido: lastName };
+
+    if (persona.nombre !== "" && persona.apellido !== "") {
+        return `${persona.apellido}, ${persona.nombre}`;
+
+    } else if (persona.nombre === "" && persona.apellido.length > 0) {
+        return persona.apellido;
+
+    } else if (persona.nombre.length > 0 && persona.apellido.length === 0) {
+        return persona.nombre;
+    }
+
+    return "";
+};
+console.log(lastFirst("Armando", "Arciniega"));
+
+console.log(lastFirst("","Arciniega"));
+
+console.log(lastFirst("Armando",""));
+
+console.log(lastFirst("",""));
+
+
+    
+    
+   
+
+    
+
 
 
