@@ -71,32 +71,23 @@ export const ellide = (cadena,n) => {
 };
 
 
-export const lastFirst = (firstName, lastName) => {
 
-    let persona = { nombre: firstName, apellido: lastName };
+export const lastFirst = ({ nombre, apellido }) => {
 
-    if (persona.nombre !== "" && persona.apellido !== "") {
-        return `${persona.apellido}, ${persona.nombre}`;
-
-    } else if (persona.nombre === "" && persona.apellido.length > 0) {
-        return persona.apellido;
-
-    } else if (persona.nombre.length > 0 && persona.apellido.length === 0) {
-        return persona.nombre;
+    if (nombre && apellido) {
+        return `${apellido}, ${nombre}`;
     }
 
-    return "";
+    if (apellido) return `${apellido}`;
+    if (nombre) return `${nombre}`;
+
+    return '';
 };
-console.log(lastFirst("Armando", "Arciniega"));
 
-console.log(lastFirst("","Arciniega"));
-
-console.log(lastFirst("Armando",""));
-
-console.log(lastFirst("",""));
-
-
-    
+console.log(lastFirst({nombre: "Eva",apellido: "Arciniega"}));
+console.log(lastFirst({nombre: "",apellido: "Arciniega"}));
+console.log(lastFirst({nombre: "Eva",apellido: ""}));
+console.log(lastFirst({nombre: "",apellido: ""}));    
     
    
 
