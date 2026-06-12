@@ -276,3 +276,19 @@ export const aboveAverage = (alumnos) =>
 
 const aproved=aboveAverage([{name: 'pat', score: 67}, {name: 'sandy', score: 82}, {name: 'max', score: 72}, {name: 'andy', score: 91}, {name: 'drew', score: 86}]);
 console.log(JSON.stringify(aproved, null, 4));
+
+
+//----------------------------------------------------------------Arrays y Strings----------------------------------------------------------------
+export const reverseNumber = (number) => {
+    return Number(
+        //Tecnica llamada encadenamiento de métodos
+        String(number)//convierte en texto el numero entrante
+            .split("")//Divide el texto carácter por carácter.
+            .reverse()//lo imprime alreves como texto
+            .join("")//une todos los elementos del array
+    );
+};
+
+console.log(reverseNumber(1200));
+
+console.log(reverseNumber(21));
