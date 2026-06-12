@@ -1,3 +1,5 @@
+//----------------------------------------------------------------Expressions----------------------------------------------------------------
+
 export const rectPerimeter = (base, altura) => 2*base + 2*altura;
 console.log("rectPerimeter(4,5)="+rectPerimeter(4,5));
 console.log("rectPerimeter(9,3)="+rectPerimeter(9,3));
@@ -23,6 +25,8 @@ export const c2f = (celsius) => (celsius*(9/5))+32;
 console.log("c2f(40)="+c2f(40));
 console.log("c2f(100)="+c2f(100));
 
+
+//Strings
 export const makeName = (firstName,lastName) =>{
 
     let persona = {nombre:firstName,apellido:lastName}; 
@@ -35,15 +39,13 @@ export const makeName = (firstName,lastName) =>{
 
 export const ellide = (cadena,n) => {
 
-    return cadena.substring(0,n) + "...";
-
-    
+    return cadena.substring(0,n) + "...";    
 
 };
 
  console.log(ellide("Soy Armando",10));
 
-
+//------------------------------------------------------------------Conditionals----------------------------------------------------------------------
  export const longer = (cadena1,cadena2) => {
 
     return cadena1.length >= cadena2.length 
@@ -54,9 +56,7 @@ export const ellide = (cadena,n) => {
 
  };
 
-  console.log(longer("Andres","Dominik"));
-
-  
+  console.log(longer("Andres","Dominik"));  
 
              setTimeout(  () => {console.log("Frida");} , 1000 );
 
@@ -75,7 +75,27 @@ export const ellide = (cadena,n) => {
 };
 
 
+export const lastFirst = (person) => {
 
+    if (person.first && person.last) {
+        return `${person.last}, ${person.first}`;
+    }
+
+    if (person.first) {
+        return person.first;
+    }
+
+    if (person.last) {
+        return person.last;
+    }
+
+    return "";
+};
+
+
+//----------------------------------------------------------------Notas mias objetos , callbacks y funciones----------------------------------------------------------------
+
+/*
 export const lastFirst = ({ nombre, apellido }) => {
 
     if (nombre && apellido) {
@@ -91,15 +111,17 @@ export const lastFirst = ({ nombre, apellido }) => {
 console.log(lastFirst({nombre: "Eva",apellido: "Arciniega"}));
 console.log(lastFirst({nombre: "",apellido: "Arciniega"}));
 console.log(lastFirst({nombre: "Eva",apellido: ""}));
-console.log(lastFirst({nombre: "",apellido: ""}));   
+console.log(lastFirst({nombre: "",apellido: ""})); 
+*/  
 
-const makeCircle = (radius) => ({
+let makeCircle = (radius) => ({
   radius: radius,
   circumference: 2 * Math.PI * radius
 });
 
 //Lo sieguiente devuelve un objeto
 console.log(makeCircle(5));
+console.log(makeCircle(15));
 //Lo siguiente no se puede por ser funcion flecha
 //let a = new makeCircle(10);
 
@@ -168,4 +190,45 @@ const personOld = {
 };
 
 personOld.saludar();
+
+
+
+//----------------------------------------------------------------Arreglos----------------------------------------------------------------
+
+export const subArray = (array, indices) => {
+    let resultado = [];
+
+    for (let i = 0; i < indices.length; i++) {
+        resultado.push(array[indices[i]]);
+    }
+
+    return resultado;
+};
+
+console.log(subArray(['A','r','m','a','n','d','o'],[3,4]));
+
+console.log(subArray(['A','r','m','a','n','d','o'],[]));
+
+console.log(subArray(['A','r','m','a','n','d','o'],[0,0]));
+
+/*
+export const over21 = (...personas) => {
+    let resultado = [];
+
+    for (let persona of personas) {
+        if (persona.age >= 21) {
+            resultado.push(persona);
+        }
+    }
+
+    return resultado;
+};*/
+
+export const over21 = (personas) =>
+    personas.filter(persona => persona.age >= 21);
+
+
+const perritosMayores=over21([{name: 'Daysi', age: 12}, {name: 'Crazy', age: 9}, {age: 21, name: 'Frida'}]);
+console.log(JSON.stringify(perritosMayores, null, 2));
+
 
