@@ -231,4 +231,48 @@ export const over21 = (personas) =>
 const perritosMayores=over21([{name: 'Daysi', age: 12}, {name: 'Crazy', age: 9}, {age: 21, name: 'Frida'}]);
 console.log(JSON.stringify(perritosMayores, null, 2));
 
+//Los ... permiten manejar conjuntos de arreglos o conjuntos de objetos, en este caso es un solo array
+export const product = (numbers) =>{
 
+    let acumulador = 1;
+     for (let number of numbers) {
+        acumulador = acumulador * number;
+    };
+    return acumulador;
+};
+product([1, 2, 3, 4, 5]);
+
+export const getRepeats = (numbers) => {
+    let repetidos = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+
+        for (let j = i + 1; j < numbers.length; j++) {
+
+            if (numbers[i] === numbers[j]) {
+
+                //includes() es un metodo que pregunta si existe algo dentro del arreglo ! este simbolo niega ejemplo !true=false
+                if (!repetidos.includes(numbers[i])) {
+                    repetidos.push(numbers[i]);
+                }
+
+            }
+
+        }
+
+    }
+
+    return repetidos;
+};
+
+console.log(getRepeats([1, 2, 3, 3, 2, 4, 5, 3, 1]));
+console.log(getRepeats([6, 67, -6, 23, 6, 3, 11, 100, 23, 6, 0, 3]));
+
+console.log(!true===false);
+
+
+export const aboveAverage = (alumnos) =>
+    alumnos.filter(alumno => alumno.score >= 80);
+
+const aproved=aboveAverage([{name: 'pat', score: 67}, {name: 'sandy', score: 82}, {name: 'max', score: 72}, {name: 'andy', score: 91}, {name: 'drew', score: 86}]);
+console.log(JSON.stringify(aproved, null, 4));
