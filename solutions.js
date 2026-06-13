@@ -292,3 +292,21 @@ export const reverseNumber = (number) => {
 console.log(reverseNumber(1200));
 
 console.log(reverseNumber(21));
+
+
+export const isWordAnagram = (word1,word2) => {
+
+    const pal1=word1.split("").sort().join("");
+
+    const pal2=word2.split("").sort().join("");
+
+    if (pal1==pal2)
+        return true;
+    else 
+        return false;
+
+
+    };
+
+console.log(isWordAnagram('spear', 'spare'));    
+
