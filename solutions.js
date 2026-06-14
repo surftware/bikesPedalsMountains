@@ -1,67 +1,72 @@
 //----------------------------------------------------------------Expressions----------------------------------------------------------------
 
-export const rectPerimeter = (base, altura) => 2*base + 2*altura;
-console.log("rectPerimeter(4,5)="+rectPerimeter(4,5));
-console.log("rectPerimeter(9,3)="+rectPerimeter(9,3));
+export const rectPerimeter = (base, altura) => 2 * base + 2 * altura;
+console.log("rectPerimeter(4,5)=" + rectPerimeter(4, 5));
+console.log("rectPerimeter(9,3)=" + rectPerimeter(9, 3));
 
-export const rectArea = (base, altura) => base*altura;
-console.log("rectArea(4,5)="+rectArea(4,5));
-console.log("rectArea(9,3)="+rectArea(9,3));
+export const rectArea = (base, altura) => base * altura;
+console.log("rectArea(4,5)=" + rectArea(4, 5));
+console.log("rectArea(9,3)=" + rectArea(9, 3));
 
-export const triArea = (base, altura) => (base*altura)/2;
-console.log("triArea(4,5)="+triArea(4,5));
-console.log("triArea(9,3)="+triArea(9,3));
+export const triArea = (base, altura) => (base * altura) / 2;
+console.log("triArea(4,5)=" + triArea(4, 5));
+console.log("triArea(9,3)=" + triArea(9, 3));
 
-export const ringArea = ( radioInterno,radioExterno) => (Math.PI*(radioExterno**2))-(Math.PI*(radioInterno**2));
-console.log("ringArea(1,4)="+ringArea(1,4));
-console.log("ringArea(5,7)="+ringArea(5,7));
-console.log("ringArea(6,6)="+ringArea(6,6));
+export const ringArea = (radioInterno, radioExterno) => (Math.PI * (radioExterno ** 2)) - (Math.PI * (radioInterno ** 2));
+console.log("ringArea(1,4)=" + ringArea(1, 4));
+console.log("ringArea(5,7)=" + ringArea(5, 7));
+console.log("ringArea(6,6)=" + ringArea(6, 6));
 
-export const f2c = (farenheit) => ((farenheit-32)*5)/9;
-console.log("f2c(32)="+f2c(32));
-console.log("f2c(100)="+f2c(100));
+export const f2c = (farenheit) => ((farenheit - 32) * 5) / 9;
+console.log("f2c(32)=" + f2c(32));
+console.log("f2c(100)=" + f2c(100));
 
-export const c2f = (celsius) => (celsius*(9/5))+32;
-console.log("c2f(40)="+c2f(40));
-console.log("c2f(100)="+c2f(100));
+export const c2f = (celsius) => (celsius * (9 / 5)) + 32;
+console.log("c2f(40)=" + c2f(40));
+console.log("c2f(100)=" + c2f(100));
 
 
 //Strings
-export const makeName = (firstName,lastName) =>{
+export const makeName = (firstName, lastName) => {
 
-    let persona = {nombre:firstName,apellido:lastName}; 
-    
-    
+    let persona = {
+        nombre: firstName,
+        apellido: lastName
+    };
+
+
     return `${persona.apellido}, ${persona.nombre}`;
 
-    
-};
-
-export const ellide = (cadena,n) => {
-
-    return cadena.substring(0,n) + "...";    
 
 };
 
- console.log(ellide("Soy Armando",10));
+export const ellide = (cadena, n) => {
+
+    return cadena.substring(0, n) + "...";
+
+};
+
+console.log(ellide("Soy Armando", 10));
 
 //------------------------------------------------------------------Conditionals----------------------------------------------------------------------
- export const longer = (cadena1,cadena2) => {
+export const longer = (cadena1, cadena2) => {
 
-    return cadena1.length >= cadena2.length 
-    ? cadena1 
-    : cadena2;
-
-   
-
- };
-
-  console.log(longer("Andres","Dominik"));  
-
-             setTimeout(  () => {console.log("Frida");} , 1000 );
+    return cadena1.length >= cadena2.length ?
+        cadena1 :
+        cadena2;
 
 
-  export const mid3 = (a, b, c) => {
+
+};
+
+console.log(longer("Andres", "Dominik"));
+
+setTimeout(() => {
+    console.log("Frida");
+}, 1000);
+
+
+export const mid3 = (a, b, c) => {
 
     if ((a >= b && a <= c) || (a <= b && a >= c)) {
         return a;
@@ -112,11 +117,11 @@ console.log(lastFirst({nombre: "Eva",apellido: "Arciniega"}));
 console.log(lastFirst({nombre: "",apellido: "Arciniega"}));
 console.log(lastFirst({nombre: "Eva",apellido: ""}));
 console.log(lastFirst({nombre: "",apellido: ""})); 
-*/  
+*/
 
 let makeCircle = (radius) => ({
-  radius: radius,
-  circumference: 2 * Math.PI * radius
+    radius: radius,
+    circumference: 2 * Math.PI * radius
 });
 
 //Lo sieguiente devuelve un objeto
@@ -156,16 +161,16 @@ const persona = {
 
 persona.saludar();
 
-    
-   
 
-    
+
+
+
 //Lo siguiente ya no muestra el nombre de juan, muestra undefined porque interpreta qiue lo llamo setTimeout, por eso se usan los arrow 
 const person = {
     nombre: "juan",
 
     saludar() {
-        setTimeout(function(){
+        setTimeout(function () {
             console.log(this.nombre);
         }, 1000);
     }
@@ -182,7 +187,7 @@ const personOld = {
 
         const self = this;
 
-        setTimeout(function() {
+        setTimeout(function () {
             console.log(self.nombre);
         }, 1000);
 
@@ -205,11 +210,11 @@ export const subArray = (array, indices) => {
     return resultado;
 };
 
-console.log(subArray(['A','r','m','a','n','d','o'],[3,4]));
+console.log(subArray(['A', 'r', 'm', 'a', 'n', 'd', 'o'], [3, 4]));
 
-console.log(subArray(['A','r','m','a','n','d','o'],[]));
+console.log(subArray(['A', 'r', 'm', 'a', 'n', 'd', 'o'], []));
 
-console.log(subArray(['A','r','m','a','n','d','o'],[0,0]));
+console.log(subArray(['A', 'r', 'm', 'a', 'n', 'd', 'o'], [0, 0]));
 
 /*
 export const over21 = (...personas) => {
@@ -228,14 +233,23 @@ export const over21 = (personas) =>
     personas.filter(persona => persona.age >= 21);
 
 
-const perritosMayores=over21([{name: 'Daysi', age: 12}, {name: 'Crazy', age: 9}, {age: 21, name: 'Frida'}]);
+const perritosMayores = over21([{
+    name: 'Daysi',
+    age: 12
+}, {
+    name: 'Crazy',
+    age: 9
+}, {
+    age: 21,
+    name: 'Frida'
+}]);
 console.log(JSON.stringify(perritosMayores, null, 2));
 
 //Los ... permiten manejar conjuntos de arreglos o conjuntos de objetos, en este caso es un solo array
-export const product = (numbers) =>{
+export const product = (numbers) => {
 
     let acumulador = 1;
-     for (let number of numbers) {
+    for (let number of numbers) {
         acumulador = acumulador * number;
     };
     return acumulador;
@@ -268,13 +282,28 @@ export const getRepeats = (numbers) => {
 console.log(getRepeats([1, 2, 3, 3, 2, 4, 5, 3, 1]));
 console.log(getRepeats([6, 67, -6, 23, 6, 3, 11, 100, 23, 6, 0, 3]));
 
-console.log(!true===false);
+console.log(!true === false);
 
 
 export const aboveAverage = (alumnos) =>
     alumnos.filter(alumno => alumno.score >= 80);
 
-const aproved=aboveAverage([{name: 'pat', score: 67}, {name: 'sandy', score: 82}, {name: 'max', score: 72}, {name: 'andy', score: 91}, {name: 'drew', score: 86}]);
+const aproved = aboveAverage([{
+    name: 'pat',
+    score: 67
+}, {
+    name: 'sandy',
+    score: 82
+}, {
+    name: 'max',
+    score: 72
+}, {
+    name: 'andy',
+    score: 91
+}, {
+    name: 'drew',
+    score: 86
+}]);
 console.log(JSON.stringify(aproved, null, 4));
 
 
@@ -282,10 +311,10 @@ console.log(JSON.stringify(aproved, null, 4));
 export const reverseNumber = (number) => {
     return Number(
         //Tecnica llamada encadenamiento de métodos
-        String(number)//convierte en texto el numero entrante
-            .split("")//Divide el texto carácter por carácter.
-            .reverse()//lo imprime alreves como texto
-            .join("")//une todos los elementos del array
+        String(number) //convierte en texto el numero entrante
+        .split("") //Divide el texto carácter por carácter.
+        .reverse() //lo imprime alreves como texto
+        .join("") //une todos los elementos del array
     );
 };
 
@@ -294,19 +323,62 @@ console.log(reverseNumber(1200));
 console.log(reverseNumber(21));
 
 
-export const isWordAnagram = (word1,word2) => {
+export const isWordAnagram = (word1, word2) => {
 
-    const pal1=word1.split("").sort().join("");
+    const pal1 = word1.split("").sort().join("");
 
-    const pal2=word2.split("").sort().join("");
+    const pal2 = word2.split("").sort().join("");
 
-    if (pal1==pal2)
+    if (pal1 == pal2)
         return true;
-    else 
+    else
         return false;
 
 
+};
+
+console.log(isWordAnagram('spear', 'spare'));
+
+export const isPhraseAnagram = (phrase1, phrase2) => {
+
+    const limpiar = function (texto) {
+        return texto
+            .toLowerCase()
+            .replace(/[^a-z0-9]/g, "");
     };
 
-console.log(isWordAnagram('spear', 'spare'));    
+    const pal1 = limpiar(phrase1).split("").sort().join("");
+    const pal2 = limpiar(phrase2).split("").sort().join("");
 
+    return pal1 === pal2;
+};
+
+console.log(isPhraseAnagram('Tiende a subir', 'Sube a tender'));
+console.log(isPhraseAnagram('Conversation', 'Voices rant on'));
+
+export const longestWords = (phrase) => {
+
+    if (phrase === "") {
+        return [];
+    }
+
+    const words = phrase.split(" ");
+
+    let maxLength = 0;
+
+    for (const word of words) {
+        if (word.length > maxLength) {
+            maxLength = word.length;
+        }
+    }
+
+    const result = [];
+
+    for (const word of words) {
+        if (word.length === maxLength) {
+            result.push(word);
+        }
+    }
+
+    return result;
+};
