@@ -3,7 +3,7 @@
 }
 
 .nav-link.active{
-    background: rgb(0, 139, 139,1);
+    background: rgba(0, 139, 139,1);
   border-radius: 50px;
 }
 
@@ -17,13 +17,19 @@
     display: block;
 }
 
-.imgPortadaTema2{
-
-    width:1280px;
+.imgPortadaTema2 {
+    width: 100%;
     height: 360px;
+    object-fit: cover;
+    display: block;
+}
+@media (max-width: 576px) {
+    .imgPortadaTema2 {
+        height: 220px;
+    }
 }
 
-redLogoTema2 {
+.redLogoTema2 {
     display:block
 }
 
@@ -31,12 +37,13 @@ redLogoTema2 {
     display: none;
 }
 
-.mq2{
-  width:700px;
-  height: 50px;
-  overflow:hidden;
-  white-space:nowrap;
-  animation:marqueeScroll 25s linear infinite;
+
+.mq2 {
+    width: 100%;
+    min-height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marqueeScroll 25s linear infinite;
 }
 
 @keyframes marqueeScroll{
@@ -50,21 +57,19 @@ redLogoTema2 {
 
 
 
-.blob{
-  overflow: hidden;
+.blob {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    overflow: hidden;
 
-  border-radius:
-    58% 42% 70% 30% /
-    30% 40% 60% 70%;
+    border-radius:
+        58% 42% 70% 30% /
+        30% 40% 60% 70%;
 
-  animation: agua 8s ease-in-out infinite;
+    animation: agua 8s ease-in-out infinite;
 }
 
-.blob img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 @keyframes agua{
   0%{
@@ -87,7 +92,7 @@ redLogoTema2 {
 }
 
 #footer {
-  background-color: rgb(0, 139, 139,1);
+  background-color: rgba(0, 139, 139,1);
   margin-top: 5%;
 }
 
