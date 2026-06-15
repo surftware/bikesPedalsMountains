@@ -382,3 +382,53 @@ export const longestWords = (phrase) => {
 
     return result;
 };
+
+//----------------------------------------------------------------DOM operationss----------------------------------------------------------------
+export const moduleTitles = () => {
+
+    //dice que el mapa no está definido porquequerySelectorAll Devuelve a NodeList. Eso no es Una matriz de JavaScript. Afortunadamente, Array.from() puede hacer una matriz desde a NodeList, por lo que esto funciona: document.querySelectorAll('h2[id]').map(h => h.innerText)
+
+    return Array.from(
+        document.querySelectorAll('.module-title')
+    ).map(h => h.innerText);
+
+};
+
+
+const titles = [...document.querySelectorAll('[target="js-help"]')]
+    .map(h => h.innerText);
+
+
+const titulos = [...document.querySelectorAll('[target="js-help"]')]
+    .map(({
+        innerText
+    }) => innerText);
+
+const texts = [...document.querySelectorAll('a[target="js-help"]')]
+    .map(a => a.innerText.trim());
+
+console.log(texts);
+
+const links = [...document.querySelectorAll('a[target="js-help"]')]
+    .map(a => a.href);
+
+console.log(links);
+
+
+export const goPurple = () => {
+    const nodo = document.querySelector('[data-bs-target="#goPurple"]');
+
+    
+    nodo.style.color = "white";
+    nodo.style.backgroundColor = "purple";
+
+    return 'Go Purple!';
+};
+
+export const copycat = (n) => {
+    const filas = document.querySelectorAll("#copycat tbody tr");
+
+    const resultadoEsperado = filas[n - 1].children[1].innerText;
+
+    return eval(resultadoEsperado);
+};
