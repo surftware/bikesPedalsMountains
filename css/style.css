@@ -30,7 +30,7 @@
 }
 
 .redLogoTema2 {
-    display:block
+    display:block;
 }
 
 .mq1{
@@ -44,6 +44,14 @@
     overflow: hidden;
     white-space: nowrap;
     animation: marqueeScroll 25s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mq2,
+    .blob,
+    .animate__animated {
+        animation: none !important;
+    }
 }
 
 @keyframes marqueeScroll{
