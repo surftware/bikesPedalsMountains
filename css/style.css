@@ -111,7 +111,7 @@ select {
 .rules-accordion .accordion-trigger {
   background-color: rgba(0, 139, 139, 1);
   border-radius: 50px;
-  width: 40%;
+  width: 80%;
   display: block;
   margin: auto;
   color: aliceblue;
@@ -141,6 +141,12 @@ select {
 #footer {
   background-color: rgba(0, 139, 139, 1);
   margin-top: 5%;
+}
+
+@media(width < 992px){
+   .navbar-nav .nav-link.active {
+        width: 60%;
+    }
 }
 
 
