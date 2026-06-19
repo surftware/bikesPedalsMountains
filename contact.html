@@ -96,7 +96,7 @@
                     </div>
                     <div class="containerImgPortadaTema2 col-md-12 col-sm-12 col-12">
                         <img src="img/mountain.png" alt="The Bike Race Series" class="img-fluid imgPortadaTema2 blob">
-                        <h2 class="text-center mq2">Contact Us</h2>
+                        <h2 class="text-center mq2">Contact Us / Registration</h2>
                     </div>
                     <div class="redLogoTema2 col-md-4 col-sm-6 col-12">
                         <img src="img/redLogo.jpeg" alt="The Bike Race Series" class="img-fluid">
@@ -114,6 +114,517 @@
                             </li>
                         </ul>
                     </div>
+                    
+
+                    <section class="registration-section">
+
+                        <div class="container">
+
+                            <div class="registration-header text-center">
+                                <h2>Rider Registration</h2>
+
+                                <p>
+                                    Complete the following form to register for the
+                                    Bike Race Series.
+                                </p>
+                            </div>
+
+                            <form class="registration-form" id="riderRegistrationForm" action="#" method="post">
+
+                                <!-- Personal Information -->
+                                <fieldset class="form-section">
+
+                                    <legend>Personal Information</legend>
+
+                                    <div class="row g-3">
+
+                                        <div class="col-md-6">
+                                            <label for="firstName" class="form-label">
+                                                First Name
+                                            </label>
+
+                                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                                autocomplete="given-name" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="lastName" class="form-label">
+                                                Last Name
+                                            </label>
+
+                                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                                autocomplete="family-name" required>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="streetAddress" class="form-label">
+                                                Street Address
+                                            </label>
+
+                                            <input type="text" class="form-control" id="streetAddress"
+                                                name="streetAddress" autocomplete="street-address">
+                                        </div>
+
+                                        <div class="col-md-5">
+                                            <label for="city" class="form-label">
+                                                City
+                                            </label>
+
+                                            <input type="text" class="form-control" id="city" name="city"
+                                                autocomplete="address-level2">
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label for="postalCode" class="form-label">
+                                                Postal Code
+                                            </label>
+
+                                            <input type="text" class="form-control" id="postalCode" name="postalCode"
+                                                autocomplete="postal-code">
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label for="country" class="form-label">
+                                                Country
+                                            </label>
+
+                                            <input type="text" class="form-control" id="country" name="country"
+                                                autocomplete="country-name">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="dateOfBirth" class="form-label">
+                                                Date of Birth
+                                            </label>
+
+                                            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth"
+                                                autocomplete="bday">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="age" class="form-label">
+                                                Age
+                                            </label>
+
+                                            <input type="number" class="form-control" id="age" name="age" min="1"
+                                                max="100">
+                                        </div>
+
+                                        <div class="col-12">
+
+                                            <p class="form-label mb-2">Gender</p>
+
+                                            <div class="form-options">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="gender"
+                                                        id="genderFemale" value="female">
+
+                                                    <label class="form-check-label" for="genderFemale">
+                                                        Female
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="gender"
+                                                        id="genderMale" value="male">
+
+                                                    <label class="form-check-label" for="genderMale">
+                                                        Male
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="gender"
+                                                        id="genderOther" value="other">
+
+                                                    <label class="form-check-label" for="genderOther">
+                                                        Other
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="gender"
+                                                        id="genderNotSay" value="prefer-not-to-say">
+
+                                                    <label class="form-check-label" for="genderNotSay">
+                                                        Prefer not to say
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+
+                                <!-- Contact Information -->
+                                <fieldset class="form-section">
+
+                                    <legend>Contact Information</legend>
+
+                                    <div class="row g-3">
+
+                                        <div class="col-md-6">
+                                            <label for="mobilePhone" class="form-label">
+                                                Mobile Phone
+                                            </label>
+
+                                            <input type="tel" class="form-control" id="mobilePhone" name="mobilePhone"
+                                                autocomplete="tel" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="emailAddress" class="form-label">
+                                                Email Address
+                                            </label>
+
+                                            <input type="email" class="form-control" id="emailAddress"
+                                                name="emailAddress" autocomplete="email" required>
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+
+                                <!-- Club Membership -->
+                                <fieldset class="form-section">
+
+                                    <legend>Club Membership</legend>
+
+                                    <p class="section-description">
+                                        Select your cycling organization, if applicable.
+                                    </p>
+
+                                    <div class="form-options form-options-column">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="clubMembership"
+                                                id="clubUci" value="uci-affiliated">
+
+                                            <label class="form-check-label" for="clubUci">
+                                                UCI-Affiliated National Federation
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="clubMembership"
+                                                id="clubBritishCycling" value="british-cycling">
+
+                                            <label class="form-check-label" for="clubBritishCycling">
+                                                British Cycling
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="clubMembership"
+                                                id="clubFrench" value="french-cycling">
+
+                                            <label class="form-check-label" for="clubFrench">
+                                                Fédération Française de Cyclisme
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="clubMembership"
+                                                id="clubCatalan" value="catalan-cycling">
+
+                                            <label class="form-check-label" for="clubCatalan">
+                                                Federació Catalana de Ciclisme
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="clubMembership"
+                                                id="clubOther" value="other">
+
+                                            <label class="form-check-label" for="clubOther">
+                                                Other
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="clubMembership"
+                                                id="clubNone" value="none">
+
+                                            <label class="form-check-label" for="clubNone">
+                                                None
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <label for="otherClub" class="form-label">
+                                            Other organization
+                                        </label>
+
+                                        <input type="text" class="form-control" id="otherClub" name="otherClub">
+                                    </div>
+
+                                </fieldset>
+
+                                <!-- Cycling Experience -->
+                                <fieldset class="form-section">
+
+                                    <legend>Previous Competitive Cycling Experience</legend>
+
+                                    <div class="form-options form-options-column">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="experienceNone"
+                                                name="experience[]" value="none">
+
+                                            <label class="form-check-label" for="experienceNone">
+                                                None
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="experienceLocal"
+                                                name="experience[]" value="local-races">
+
+                                            <label class="form-check-label" for="experienceLocal">
+                                                Local Trail or Community Races
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="experienceEnduro"
+                                                name="experience[]" value="enduro-downhill">
+
+                                            <label class="form-check-label" for="experienceEnduro">
+                                                Enduro or Downhill Regional Events
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="experienceCrossCountry"
+                                                name="experience[]" value="cross-country">
+
+                                            <label class="form-check-label" for="experienceCrossCountry">
+                                                Cross-Country (XCO)
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="experienceOneSeason"
+                                                name="experience[]" value="one-season">
+
+                                            <label class="form-check-label" for="experienceOneSeason">
+                                                One Season
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="experienceMultipleSeasons" name="experience[]"
+                                                value="multiple-seasons">
+
+                                            <label class="form-check-label" for="experienceMultipleSeasons">
+                                                Two or More Seasons
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="experienceElite"
+                                                name="experience[]" value="elite-uci">
+
+                                            <label class="form-check-label" for="experienceElite">
+                                                Elite or UCI-Licensed Rider
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+
+                                <!-- Cycling License -->
+                                <fieldset class="form-section">
+
+                                    <legend>Cycling License</legend>
+
+                                    <div class="form-options">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cyclingLicense"
+                                                id="licenseNone" value="none">
+
+                                            <label class="form-check-label" for="licenseNone">
+                                                None
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cyclingLicense"
+                                                id="licenseNational" value="national-federation">
+
+                                            <label class="form-check-label" for="licenseNational">
+                                                National Federation License
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cyclingLicense"
+                                                id="licenseUci" value="uci">
+
+                                            <label class="form-check-label" for="licenseUci">
+                                                UCI License
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <label for="licenseNumber" class="form-label">
+                                            License Number
+                                        </label>
+
+                                        <input type="text" class="form-control" id="licenseNumber" name="licenseNumber">
+                                    </div>
+
+                                </fieldset>
+
+                                <!-- Emergency Contact -->
+                                <fieldset class="form-section">
+
+                                    <legend>Emergency Contact</legend>
+
+                                    <div class="row g-3">
+
+                                        <div class="col-md-4">
+                                            <label for="emergencyName" class="form-label">
+                                                Name
+                                            </label>
+
+                                            <input type="text" class="form-control" id="emergencyName"
+                                                name="emergencyName" required>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label for="emergencyRelationship" class="form-label">
+                                                Relationship
+                                            </label>
+
+                                            <input type="text" class="form-control" id="emergencyRelationship"
+                                                name="emergencyRelationship" required>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label for="emergencyPhone" class="form-label">
+                                                Phone Number
+                                            </label>
+
+                                            <input type="tel" class="form-control" id="emergencyPhone"
+                                                name="emergencyPhone" required>
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+
+                                <!-- Rider Agreement -->
+                                <fieldset class="form-section agreement-section">
+
+                                    <legend>Rider Agreement</legend>
+
+                                    <div class="agreement-text">
+
+                                        <p>
+                                            I agree to abide by all rules and safety regulations
+                                            of the Bike Race Series (BRS).
+                                        </p>
+
+                                        <p>
+                                            I understand that mountain biking is inherently
+                                            dangerous and involves the risk of serious injury or
+                                            death.
+                                        </p>
+
+                                        <p>
+                                            I acknowledge that it is my responsibility to ensure
+                                            my equipment is safe and that I ride within my
+                                            abilities.
+                                        </p>
+
+                                        <p>
+                                            By submitting this form, I waive liability and
+                                            indemnify BRS, its organizers, volunteers, affiliates
+                                            and race venues from claims or damages arising from
+                                            participation in the series.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="form-check agreement-check">
+
+                                        <input class="form-check-input" type="checkbox" id="acceptAgreement"
+                                            name="acceptAgreement" required>
+
+                                        <label class="form-check-label" for="acceptAgreement">
+                                            I have read and accept the rider agreement.
+                                        </label>
+
+                                    </div>
+
+                                    <div class="row g-3 mt-2">
+
+                                        <div class="col-md-6">
+                                            <label for="riderSignature" class="form-label">
+                                                Rider's Full Name
+                                            </label>
+
+                                            <input type="text" class="form-control" id="riderSignature"
+                                                name="riderSignature">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="agreementDate" class="form-label">
+                                                Date
+                                            </label>
+
+                                            <input type="date" class="form-control" id="agreementDate"
+                                                name="agreementDate">
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="guardianSignature" class="form-label">
+                                                Parent or Guardian Full Name
+                                                <span class="optional-text">
+                                                    — required only if the rider is under 18
+                                                </span>
+                                            </label>
+
+                                            <input type="text" class="form-control" id="guardianSignature"
+                                                name="guardianSignature">
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+
+                                <!-- Actions -->
+                                <div class="form-actions">
+
+                                    <button type="reset" class="btn btn-outline-secondary">
+                                        Clear Form
+                                    </button>
+
+                                    <button type="submit" class="btn registration-submit">
+                                        Submit Registration
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </section>
+                
+
                 </div>
             </div>
 
