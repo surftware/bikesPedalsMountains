@@ -143,81 +143,7 @@ select {
   margin-bottom: 8px;
 }
 
-/* Contenedor responsive */
-.table-responsive {
-  width: 90%;
-  margin: 40px auto;
-  border-radius: 16px;
-  overflow-x: auto;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
 
-/* Tabla general */
-.event-table {
-  width: 100%;
-  margin: 0 auto;
-  border-collapse: collapse;
-  background-color: white;
-  color: #252525;
-}
-
-/* Encabezado principal */
-.event-table thead {
-  background-color: var(--dark-color);
-  color: white;
-}
-
-.event-table thead th {
-  padding: 16px;
-  border: none;
-  font-size: 1.05rem;
-  text-align: center;
-}
-
-/* Celdas */
-.event-table th,
-.event-table td {
-  padding: 14px 18px;
-  border: 1px solid var(--border-color);
-  vertical-align: middle;
-}
-
-/* Filas de sección */
-.event-table .section-title th {
-  background-color: var(--main-color);
-  color: white;
-  border-color: var(--main-color);
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-  text-align: center;
-}
-
-/* Filas normales */
-.event-table tbody tr:not(.section-title):nth-child(even) {
-  background-color: #f3f6f7;
-}
-
-.event-table tbody tr:not(.section-title):hover {
-  background-color: rgba(0, 139, 139, 0.12);
-  transition: background-color 0.2s ease;
-}
-
-/* Primera columna */
-.event-table tbody td:first-child,
-.event-table tbody th:first-child {
-  font-weight: 600;
-}
-
-/* Enlaces */
-.event-table a {
-  color: var(--main-color);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.event-table a:hover {
-  text-decoration: underline;
-}
 
 #footer {
   background-color: rgba(0, 139, 139, 1);
@@ -227,25 +153,6 @@ select {
 @media(width < 992px) {
   .navbar-nav .nav-link.active {
     width: 60%;
-  }
-}
-
-@media (max-width: 768px) {
-  .table-responsive {
-    width: 95%;
-    margin: 25px auto;
-
-    
-  }
-
-  .event-table {
-    min-width: 700px;
-  }
-
-  .event-table th,
-  .event-table td {
-    padding: 10px 12px;
-    font-size: 0.9rem;
   }
 }
 
@@ -266,5 +173,189 @@ select {
     padding: 10px;
     text-align: center;
 
+  }
+}
+
+
+/* Escritorios medianos y tablets */
+@media (max-width: 991.98px) {
+
+  .centrar-imagen{
+    display: block;
+    margin: auto;
+  }
+}
+
+/* ============================
+   Tabla responsive
+============================ */
+
+.center-table{
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.table-responsive {
+  width: 100%;
+  margin: 30px auto;
+  overflow-x: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  -webkit-overflow-scrolling: touch;
+}
+
+.event-table {
+  width: 100%;
+  margin: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background-color: white;
+  color: #252525;
+}
+
+.event-table thead th {
+  padding: 16px;
+  background-color: var(--dark-color);
+  color: white;
+  border: 1px solid var(--dark-color);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.event-table th,
+.event-table td {
+  padding: 14px 18px;
+  border: 1px solid var(--border-color);
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Ancho proporcional de las columnas */
+
+.event-table th:nth-child(1),
+.event-table td:nth-child(1) {
+  width: 28%;
+}
+
+.event-table th:nth-child(2),
+.event-table td:nth-child(2) {
+  width: 22%;
+}
+
+.event-table th:nth-child(3),
+.event-table td:nth-child(3) {
+  width: 50%;
+}
+
+/* Títulos internos de sección */
+
+.event-table tbody tr > th[colspan="3"] {
+  padding: 12px;
+  background-color: var(--main-color);
+  color: white;
+  border-color: var(--main-color);
+  text-align: center;
+}
+
+/* Primera columna */
+
+.event-table tbody td:first-child {
+  font-weight: 600;
+}
+
+/* Enlaces */
+
+.event-table a {
+  color: var(--main-color);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.event-table a:hover {
+  text-decoration: underline;
+}
+
+/* Tablets */
+
+@media (max-width: 991.98px) {
+  .event-table th,
+  .event-table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .centrar-imagen {
+    display: block;
+    margin-inline: auto;
+  }
+}
+
+/* Teléfonos */
+
+@media (max-width: 575.98px) {
+  .table-responsive {
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+
+  .event-table th,
+  .event-table td {
+    padding: 6px;
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .event-table thead th {
+    font-size: 0.78rem;
+  }
+
+  .event-table th:nth-child(1),
+  .event-table td:nth-child(1) {
+    width: 32%;
+  }
+
+  .event-table th:nth-child(2),
+  .event-table td:nth-child(2) {
+    width: 23%;
+  }
+
+  .event-table th:nth-child(3),
+  .event-table td:nth-child(3) {
+    width: 45%;
+  }
+
+  .event-table tbody tr > th[colspan="3"] {
+    font-size: 0.85rem;
+  }
+}
+
+.map-section {
+  width: 90%;
+  margin: 40px auto;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .map-section {
+    width: 95%;
+  }
+
+  #map {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  #map {
+    height: 320px;
   }
 }
